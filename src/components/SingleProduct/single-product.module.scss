@@ -1,0 +1,92 @@
+.product_container {
+    height: calc((360 / 1920) * 100vw);
+    width: calc((260 / 1920) * 100vw);
+    border: 1px solid var(--p-tag);
+    border-radius: calc((10 / 1920) * 100vw);
+    padding: calc((20 / 1920) * 100vw);
+    position: relative;
+    cursor: pointer;
+
+    .upper_icons {
+        display: flex;
+        justify-content: space-between;
+
+        .sale_upper_div {
+            width: calc((45 / 1920) * 100vw);
+            height: calc((25 / 1920) * 100vw);
+
+            .sale_div {
+                background-color: var(--accent);
+                border-radius: calc((5 / 1920) * 100vw);
+                color: var(--white);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .like_icon {
+            cursor: pointer;
+            transition: 0.1s ease-in-out;
+            &:active {
+                scale: 0.9;
+            }
+        }
+    }
+
+    .img_div {
+        img{
+            height: calc((200 / 1920) * 100vw);
+            width: calc((200 / 1920) * 100vw);
+        }
+    }
+
+    .name_div {
+        margin-top: calc((5 / 1920) * 100vw);
+
+        h6 {
+            font-size: calc((16 / 1920) * 100vw);
+            color: var(--p-tag);
+        }
+    }
+
+    .price_div {
+        position: absolute;
+        bottom: calc((20 / 1920) * 100vw);
+        width: calc((210 / 1920) * 100vw);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h6 {
+            font-size: calc((20 / 1920) * 100vw);
+
+            span {
+                font-size: calc((15 / 1920) * 100vw);
+                color: var(--cut-price);
+                text-decoration: line-through;
+            }
+        }
+
+        button {
+            background-color: var(--primary);
+            border: none;
+            width: calc((100 / 1920) * 100vw);
+            height: calc((35 / 1920) * 100vw);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: calc((5 / 1920) * 100vw);
+            color: var(--white);
+            font-size: calc((18 / 1920) * 100vw);
+        }
+
+        .btn {
+            cursor: pointer;
+            transition: 0.1s ease-in-out;
+            &:active {
+                scale: 0.9;
+            }
+        }
+    }
+}

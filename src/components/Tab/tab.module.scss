@@ -1,0 +1,58 @@
+.tabComponent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.tabList {
+    border-bottom: 1px solid var(--p-tag);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: left;
+}
+
+.tab_header{
+    cursor: pointer;
+}
+
+.tabList li {
+    margin-right: 100px;
+    padding: 25px 40px;
+}
+
+.tabList li a {
+    font-size: 20px;
+    color: var(--black);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.tabContentContainer {
+    width: 100%;
+    padding: 20px;
+}
+
+.tabContentContainer div {
+    margin-bottom: 20px;
+}
+
+.tab_content{
+    line-height: 40px;
+    padding: 0 20px;
+    font-size: 20px;
+}
+
+.active {
+    transform: translateY(2.5px);
+    border-bottom: 5px solid var(--primary);
+}
+
+.inactive {
+    transform: translateY(2.5px);
+    color: #666;
+}

@@ -1,0 +1,38 @@
+.container_div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: calc((30 / 1920) * 100vw);
+
+  .product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: calc((20 / 1920) * 100vw);
+
+    .product_img {
+      position: relative;
+
+      img {
+        height: calc((100 / 1920) * 100vw);
+        width: calc((100 / 1920) * 100vw);
+        border-radius: calc((20 / 1920) * 100vw);
+      }
+
+      p {
+        right: calc((-10 / 1920) * 100vw);
+        top: calc((-10 / 1920) * 100vw);
+        border: 1px solid var(--p-light-tag);
+        background-color: var(--white);
+        font-weight: 700;
+        position: absolute;
+        width: calc((30 / 1920) * 100vw);
+        height: calc((30 / 1920) * 100vw);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: calc((50 / 1920) * 100vw);
+      }
+    }
+  }
+}

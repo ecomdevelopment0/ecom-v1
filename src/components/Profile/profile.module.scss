@@ -1,0 +1,93 @@
+.container_div {
+  padding: calc((40 / 1920) * 100vw);
+
+  .heading_div {
+    h3 {
+      font-size: calc((22 / 1920) * 100vw);
+    }
+  }
+
+  .main_div {
+    margin-top: calc((50 / 1920) * 100vw);
+
+    .input_container {
+      display: flex;
+      width: calc((600 / 1920) * 100vw);
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: calc((20 / 1920) * 100vw);
+
+      p {
+        font-size: calc((16 / 1920) * 100vw);
+      }
+
+      .input_div {
+        display: flex;
+        align-items: center;
+        gap: calc((35 / 1920) * 100vw);
+
+        .input {
+          border-radius: calc((5 / 1920) * 100vw);
+          border: 1px solid var(--p-light-tag);
+          padding: calc((16 / 1920) * 100vw);
+          display: flex;
+          gap: calc((20 / 1920) * 100vw);
+          align-items: center;
+
+          input {
+            font-size: calc((16 / 1920) * 100vw);
+            font-weight: 600;
+            width: calc((350 / 1920) * 100vw);
+            border: none;
+
+            &:focus {
+              outline: none;
+            }
+
+            &::placeholder {
+              font-weight: 500;
+            }
+          }
+
+          textarea {
+            font-size: calc((16 / 1920) * 100vw);
+            font-weight: 700;
+            width: calc((350 / 1920) * 100vw);
+            height: calc((70 / 1920) * 100vw);
+            border: none;
+
+            &:focus {
+              outline: none;
+            }
+
+            &::placeholder {
+              font-weight: 500;
+            }
+            resize: none;
+          }
+
+          svg {
+            fill: var(--primary);
+            height: calc((20 / 1920) * 100vw);
+            width: calc((20 / 1920) * 100vw);
+            transition: 0.2s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+
+  button {
+    margin-top: calc((40 / 1920) * 100vw);
+    font-size: 16px;
+    width:  calc((200 / 1920) * 100vw);
+    padding: 12px;
+    color: var(--white);
+    background-color: var(--primary);
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    cursor: pointer;
+  }
+
+}

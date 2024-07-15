@@ -1,0 +1,15 @@
+.container_div {
+    padding: calc((40 / 1920) * 100vw);
+  
+    .heading_div {
+      h3 {
+        font-size: calc((22 / 1920) * 100vw);
+      }
+    }
+  
+    .main_div {
+        margin-top: 50px;
+        
+    }
+  }
+  

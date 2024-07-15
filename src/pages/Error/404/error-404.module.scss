@@ -1,0 +1,53 @@
+.error_container{
+    padding: 160px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .error_left{
+
+        h2{
+            font-size: 40px;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+        
+        h1{
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 25px;
+        }
+        
+        p{
+            width: 610px;
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+
+        button{
+            width: 195px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--primary);
+            border: none;
+            transition: 0.3s ease-in-out;
+            border-radius: 5px;
+            font-size: 20px;
+            
+            &:active{
+                scale: 0.9;
+                
+            }
+
+            .link{
+                text-decoration: none;
+                color: var(--white);
+            }
+        }
+    }
+
+
+
+}

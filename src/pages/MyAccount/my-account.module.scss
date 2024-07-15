@@ -1,0 +1,65 @@
+.my_account_container {
+  padding: calc((50 / 1920) * 100vw) calc((140 / 1920) * 100vw)
+    calc((170 / 1920) * 100vw);
+
+  .heading_div {
+    h2 {
+      font-size: calc((28 / 1920) * 100vw);
+      margin-bottom: calc((10 / 1920) * 100vw);
+      font-weight: 500;
+    }
+
+    h6 {
+      font-size: calc((16 / 1920) * 100vw);
+      margin-bottom: calc((30 / 1920) * 100vw);
+      color: var(--p-light-tag);
+      font-weight: 500;
+    }
+  }
+
+  .main_container {
+    display: flex;
+    gap: calc((20 / 1920) * 100vw);
+
+    .container_left {
+      border: 1px solid var(--p-light-tag);
+      width: calc((350 / 1920) * 100vw);
+      border-radius: calc((10 / 1920) * 100vw);
+
+      h6 {
+        margin: calc((15 / 1920) * 100vw);
+        font-size: calc((16 / 1920) * 100vw);
+        font-weight: 500;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+          color: var(--accent);
+        }
+      }
+
+      .active {
+        color: var(--accent);
+      }
+
+      h5 {
+        color: var(--p-light-tag);
+        margin: calc((25 / 1920) * 100vw) calc((15 / 1920) * 100vw)
+          calc((10 / 1920) * 100vw);
+        font-size: calc((16 / 1920) * 100vw);
+        font-weight: 700;
+      }
+
+      .border_div {
+        border: 0.2px solid var(--p-light-tag);
+        margin-bottom: calc((20 / 1920) * 100vw);
+      }
+    }
+
+    .container_right {
+      border: 1px solid var(--p-light-tag);
+      width: 100%;
+      border-radius: calc((10 / 1920) * 100vw);
+    }
+  }
+}

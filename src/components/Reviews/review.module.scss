@@ -1,0 +1,37 @@
+.review_container {
+    margin: 25px 100px;
+    border: 1px solid var(--p-tag);
+    padding: 16px;
+    border-radius: 10px;
+       .user {
+
+        display: flex;
+
+        .user_img{
+            height: 45px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        h5{
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .stars_div {
+            gap: 4px;
+            display: flex;
+            align-items: center;
+
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+
+    p{
+        margin-top: 16px;
+    }
+}

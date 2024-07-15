@@ -1,0 +1,11 @@
+.categoryTabContainer {
+  width: calc((200 / 1920) * 100vw);
+  height: calc((125 / 1920) * 100vw);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc((25 / 1920) * 100vw);
+  border-radius: calc((10 / 1920) * 100vw);
+  color: var(--white);
+  cursor: pointer;
+}

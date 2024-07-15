@@ -1,0 +1,36 @@
+.accordion {
+    padding: 15px 200px;
+
+
+    .accordionHeader {
+        font-size: 20px;
+        padding: 15px;
+        border-radius: 5px;
+        border: 1px solid var(--p-tag);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.1s ease-in-out;
+        
+    }
+
+    &-title {
+        font-weight: bold;
+    }
+    
+    .accordionArrowDown {
+        transition: .3s ease-in-out;
+        transform: rotate(180deg);
+    }
+
+    .accordionArrowUp {
+        transition: .3s ease-in-out;
+        transform: rotate(0deg);
+    }
+    
+    .accordionContent {
+        font-size: 18px;
+        padding: 10px 30px;
+    }
+}

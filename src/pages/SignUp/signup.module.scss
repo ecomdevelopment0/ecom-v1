@@ -1,0 +1,139 @@
+.container {
+  background-image: url(../../assets/signup-img.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  padding: 75px 0 115px;
+  font-size: 16px;
+
+  .sub_container {
+    background-color: var(--secondary);
+    padding: 40px 50px;
+    width: 500px;
+    border-radius: 16px;
+    margin-bottom: 65px;
+
+    h3 {
+      color: var(--primary);
+      text-align: center;
+      font-size: 24px;
+    }
+
+    .input_div {
+      margin-bottom: 16px;
+
+      &.error input {
+        border: 2px solid var(--danger);
+      }
+
+      .eye_pass_div {
+        display: flex;
+        position: relative;
+
+        img {
+          cursor: pointer;
+          transition: 0.1s ease-in-out;
+
+          &:active {
+            scale: 0.9;
+          }
+
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+
+      p {
+        margin-bottom: 5px;
+      }
+
+      input {
+        font-size: 16px;
+        border: none;
+        width: 100%;
+        padding: 13.5px 16px;
+        border-radius: 5px;
+        margin-bottom: 5px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .errorMsg {
+        color: var(--danger);
+        font-size: 16px;
+        margin-top: 5px;
+        animation: fadeIn 0.3s ease-in-out;
+      }
+    }
+
+    .p_tag01 {
+      margin: 34px 0 16px;
+      text-align: center;
+      font-size: 14px;
+
+      span {
+        cursor: pointer;
+        text-decoration: underline;
+        color: var(--accent);
+      }
+    }
+
+    .btn,
+    button {
+      font-size: 16px;
+      width: 100%;
+      padding: 12px;
+      color: var(--white);
+      background-color: var(--primary);
+      border: none;
+      border-radius: 5px;
+      margin: 34px 0 50px;
+      cursor: pointer;
+    }
+
+    .p_tag02 {
+      text-align: center;
+    }
+
+    .p_tag03 {
+      cursor: pointer;
+      text-decoration: underline;
+      color: var(--accent);
+      text-align: center;
+    }
+  }
+
+  .down_conatiner {
+    padding: 0px 50px;
+
+    p {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    button {
+      cursor: pointer;
+      font-size: 16px;
+      width: 100%;
+      padding: 12px;
+      color: var(--primary);
+      background-color: var(--white);
+      border: 1px solid var(--primary);
+      border-radius: 5px;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

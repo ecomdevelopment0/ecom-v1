@@ -1,0 +1,13 @@
+.features_div {
+    display: flex;
+    padding: 30px 100px;
+    justify-content: space-between;
+    background-color: var(--secondary);
+
+    .feature {
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}

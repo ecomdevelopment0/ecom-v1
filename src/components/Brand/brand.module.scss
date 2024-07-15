@@ -1,0 +1,29 @@
+.brand_container {
+  padding: calc((80 / 1920) * 100vw) calc((100 / 1920) * 100vw);
+
+  .all_brands {
+    padding: calc((30 / 1920) * 100vw) 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    column-gap: calc((70 / 1920) * 100vw);
+    row-gap: calc((30 / 1920) * 100vw);
+
+    .brand_div {
+      img {
+        height: calc((50 / 1920) * 100vw);
+        width: calc((50 / 1920) * 100vw);
+      }
+      h3{
+        font-size:  calc((20 / 1920) * 100vw);
+      }
+      cursor: pointer;
+      background-color: var(--secondary);
+      border-radius: calc((15 / 1920) * 100vw);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: calc((16 / 1920) * 100vw);
+      height: calc((90 / 1920) * 100vw);
+    }
+  }
+}
