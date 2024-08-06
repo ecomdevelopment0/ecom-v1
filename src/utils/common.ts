@@ -6,7 +6,7 @@ export function calculatePercentageOff(
     return 0;
   }
   const discount = ((actualPrice - marketPrice) / actualPrice) * 100;
-  return discount;
+  return Math.round(discount * 10) / 10;
 }
 
 export function calculateGST(totalAmount: number) {

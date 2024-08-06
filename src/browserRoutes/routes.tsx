@@ -11,6 +11,7 @@ import Checkout from "../pages/Checkout/Checkout";
 import MyAccount from "../pages/MyAccount/MyAccount";
 import loginLoader from "./DataWriters/loaders/loginLoader";
 import signUpLoader from "./DataWriters/loaders/signUpLoader";
+import CartCheckout from "../pages/Checkout/CartCheckout";
 
 export const routes = createBrowserRouter([
   {
@@ -53,8 +54,13 @@ export const routes = createBrowserRouter([
         // loader: loginLoader,
       },
       {
-        path: "/checkout",
+        path: "/checkout/:productId",
         element: <Checkout />,
+        // loader: loginLoader,
+      },
+      {
+        path: "/cart-checkout",
+        element: <CartCheckout />,
         // loader: loginLoader,
       },
       {

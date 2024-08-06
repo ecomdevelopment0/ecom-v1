@@ -56,7 +56,7 @@ export default function Signup() {
     }
 
     if (valid) {
-      let response = await authProvider.signup(
+      const response = await authProvider.signup(
         fullName,
         email,
         mobile,

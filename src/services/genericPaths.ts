@@ -20,8 +20,8 @@ export const GenericPaths = {
     // payment routes
     INITIATE_PAYMENT: "/user/payment",
     CHECK_PAYMENT: "/user/payment/check",
-    PAYMENT_WEBHOOK: "/user/payment/webhook",
     PAYMENT_FAILED: "/user/payment/failed",
+    INITIATE_PAYMENT_INDIVIDUAL: "/user/individual/payment",
 
     // order routes
     ORDER: "/user/order",

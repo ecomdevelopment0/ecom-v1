@@ -12,7 +12,7 @@ baseQuery.interceptors.request.use(
   async (config) => {
     const userData = localStorageProvider.get("auth_data");
     const accessToken = userData?.accessToken;
-    
+
     if (accessToken) {
       config.headers.Authorization = `Bearer ${accessToken}`;
     }
@@ -33,8 +33,10 @@ baseQuery.interceptors.response.use(
       originalRequest._retry = true;
       const newAccessToken = await refreshAccessToken();
       if (newAccessToken) {
-        axios.defaults.headers.common['Authorization'] = `Bearer ${newAccessToken}`;
-        originalRequest.headers['Authorization'] = `Bearer ${newAccessToken}`;
+        axios.defaults.headers.common[
+          "Authorization"
+        ] = `Bearer ${newAccessToken}`;
+        originalRequest.headers["Authorization"] = `Bearer ${newAccessToken}`;
         return axios(originalRequest);
       }
     }
@@ -51,11 +53,15 @@ const refreshAccessToken = async () => {
       throw new Error("Refresh token not available");
     }
 
-    const response = await axios.post(`${baseURL}/user/refresh`, {}, {
-      headers: {
-        Authorization: `Bearer ${refreshToken}`
+    const response = await axios.post(
+      `${baseURL}/user/refresh`,
+      {},
+      {
+        headers: {
+          Authorization: `Bearer ${refreshToken}`,
+        },
       }
-    });
+    );
 
     const { accessToken, refreshToken: newRefreshToken } = response.data;
     localStorageProvider.save("auth_data", {
@@ -66,45 +72,28 @@ const refreshAccessToken = async () => {
 
     return accessToken;
   } catch (error) {
-    redirect(GenericPaths.LOGIN)
+    redirect(GenericPaths.LOGIN);
     console.error("Failed to refresh access token:", error);
     return null;
   }
 };
 
-
 export async function postAPI(url: string, data: any) {
-  try {
-    const response = (await baseQuery.post(url, data)) as any;
-    return response?.data;
-  } catch (error) {
-    throw error;
-  }
+  const response = (await baseQuery.post(url, data)) as any;
+  return response?.data;
 }
 
 export async function putAPI(url: string, data?: any) {
-  try {
-    const response = (await baseQuery.put(url, data)) as any;
-    return response?.data;
-  } catch (error) {
-    throw error;
-  }
+  const response = (await baseQuery.put(url, data)) as any;
+  return response?.data;
 }
 
 export async function getAPI(url: string) {
-  try {
-    const response = (await baseQuery.get(url)) as any;
-    return response?.data;
-  } catch (error) {
-    throw error;
-  }
+  const response = (await baseQuery.get(url)) as any;
+  return response?.data;
 }
 
 export async function deleteAPI(url: string) {
-  try {
-    const response = (await baseQuery.delete(url)) as any;
-    return response?.data;
-  } catch (error) {
-    throw error;
-  }
+  const response = (await baseQuery.delete(url)) as any;
+  return response?.data;
 }

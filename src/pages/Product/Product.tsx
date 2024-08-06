@@ -234,6 +234,7 @@ export default function Product() {
     };
 
     fetchProduct();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [productId, cart, navigate, inCart]);
 
   const handleAccordionClick = (index: number) => {
@@ -285,7 +286,9 @@ export default function Product() {
     handleCloseModal();
   };
 
-  // console.log(product);
+  const handleBuyNowClick = () => {
+    navigate(`/checkout/${productId}?quantity=${quantity}`);
+  };
 
   return (
     <>
@@ -395,6 +398,7 @@ export default function Product() {
                     className={`${stockZeroError ? style.fade : ""} ${
                       style.buy_btn
                     }`}
+                    onClick={handleBuyNowClick}
                   >
                     Buy Now
                   </button>

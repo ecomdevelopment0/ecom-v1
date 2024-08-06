@@ -8,12 +8,16 @@ import { cartProvider } from "../../services/Cart/cartProvider";
 import { useQuery, useQueryClient } from "react-query";
 import { useAppSelector } from "../../hooks/hooks";
 import { calculateGST } from "../../utils/common";
+import { useNavigate } from "react-router-dom";
+import { trio } from "ldrs";
+trio.register();
 
 const authFromLocalStorage = localStorageProvider.get(
   GenericPaths.AUTH_DATA_LOCAL_STORAGE
 );
 
 async function getCart({ queryKey }: any) {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [_key, userId] = queryKey;
   return await cartProvider.getCart(userId);
 }
@@ -34,6 +38,10 @@ export default function Cart() {
   const queryClient = useQueryClient();
   const authFromRedux = useAppSelector((state) => state.auth.user);
   const authData = authFromLocalStorage || authFromRedux;
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(`/cart-checkout`);
+  };
 
   const { data: cart, isLoading }: any = useQuery(
     ["cart", authData?.userId],
@@ -133,7 +141,9 @@ export default function Cart() {
                   <h2>₹{subTotal + calculateGST(subTotal)}</h2>
                 </div>
 
-                <button className={style.price_btn}>Proceed to checkout</button>
+                <button className={style.price_btn} onClick={handleClick}>
+                  Proceed to checkout
+                </button>
               </div>
             </div>
           )}
