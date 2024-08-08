@@ -24,7 +24,7 @@ export const GenericPaths = {
     INITIATE_PAYMENT_INDIVIDUAL: "/user/individual/payment",
 
     // order routes
-    ORDER: "/user/order",
+    ORDER: "/user/order?userId=",
 
     // product routes 
     PRODUCTS: "/products",

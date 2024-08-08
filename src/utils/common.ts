@@ -1,3 +1,5 @@
+import moment from 'moment-timezone';
+
 export function calculatePercentageOff(
   actualPrice: number,
   marketPrice: number
@@ -29,5 +31,15 @@ export const sortProducts = (products: any, sortValue: any) => {
       );
     default:
       return sortedProducts;
+  }
+};
+
+export const convertDate = (dateString: any) => {
+  if (dateString) {
+    const date = moment(dateString);
+    const dayOfWeek = date.format('ddd');
+    const month = date.format('MMMM');
+    const day = date.format('D');
+    return `${dayOfWeek}, ${day} ${month}`;
   }
 };
